@@ -1,0 +1,16 @@
+# Bỏ qua các thư mục chứa trọng số mô hình lớn
+models/
+gguf/
+*.gguf
+.config/
+sample_data/
+
+# Bỏ qua checkpoint huấn luyện, chỉ giữ lại adapter cuối cùng
+**/checkpoint-*/
+**/*.bin
+**/*.safetensors
+
+# Giữ lại các file cấu hình và báo cáo
+!adapters/**/adapter_config.json
+!adapters/**/dpo_metrics.json
+!submission/**/*
